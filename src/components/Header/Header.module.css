@@ -1,0 +1,16 @@
+.container{
+    gap: 10px;
+    background-color: lightskyblue;
+    padding: 15px;
+    display: flex;
+    border-radius: 5px;
+}
+
+.link{
+    color: white;
+    font-weight: bold;
+}
+
+.activeLink{
+    color: black;
+}
