@@ -1,0 +1,8 @@
+.container{
+    display: flex;
+}
+
+.Nav{
+    display: flex;
+    gap:15px;
+}
