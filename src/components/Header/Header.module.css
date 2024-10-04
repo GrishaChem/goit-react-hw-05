@@ -1,10 +1,13 @@
-.container{
+.container {
     gap: 10px;
-    background-color: lightskyblue;
+    background-color: rgb(155, 210, 247);
     padding: 15px;
     display: flex;
     border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.4);
 }
+
 
 .link{
     color: white;

@@ -1,0 +1,13 @@
+.img {
+  width: 150px;
+  height: 250px; /* Фиксированная высота для постера */
+  object-fit: cover; /* Изображение будет обрезаться, чтобы заполнить весь блок */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}

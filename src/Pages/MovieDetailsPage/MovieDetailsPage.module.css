@@ -4,5 +4,14 @@
 
 .Nav{
     display: flex;
+    flex-direction: column;
     gap:15px;
+    border-bottom: 2px solid rgba(51, 51, 51, 0.5); /* Прозрачная темная линия снизу */
+    margin-bottom: 20px; /* Отступ под линией */
+    padding-bottom: 10px; /* Внутренний отступ для содержания */
+}
+
+.genres{
+    display: flex;
+    gap: 10px;
 }

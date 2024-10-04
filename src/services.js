@@ -3,6 +3,10 @@ import axios  from "axios";
 const URL = 'https://api.themoviedb.org/3/trending/movie/week'
 
 const URLBYID = 'https://api.themoviedb.org/3/movie'
+
+
+
+
 const options = {
   headers: {
 	// Замість api_read_access_token вставте свій токен
@@ -15,8 +19,12 @@ export const fetchMovies = async () => {
     const { data } = await axios.get(URL, options)
     return data;
 }
-
 export const fetchMovieById = async (movieId) => {
     const { data } = await axios.get(`${URLBYID}/${movieId}`, options)
+    return data;
+}
+
+export const fetchCreditsById = async (movieId) => {
+    const { data } = await axios.get(`${URLBYID}/${movieId}/credits`, options)
     return data;
 }
