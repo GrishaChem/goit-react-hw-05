@@ -5,7 +5,7 @@ const URL = 'https://api.themoviedb.org/3/trending/movie/week'
 const URLBYID = 'https://api.themoviedb.org/3/movie'
 
 
-
+const URLSEARCH = 'https://api.themoviedb.org/3/search/movie'
 
 const options = {
   headers: {
@@ -26,5 +26,15 @@ export const fetchMovieById = async (movieId) => {
 
 export const fetchCreditsById = async (movieId) => {
     const { data } = await axios.get(`${URLBYID}/${movieId}/credits`, options)
+    return data;
+}
+
+export const fetchReviewsById = async (movieId) => {
+    const { data } = await axios.get(`${URLBYID}/${movieId}/reviews`, options)
+    return data;
+}
+
+export const fetchMoviesByQuery = async (query) => {
+    const { data } = await axios.get(`${URLSEARCH}?query=${query}`, options); // Исправление URL
     return data;
 }

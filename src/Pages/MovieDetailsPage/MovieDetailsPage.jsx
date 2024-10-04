@@ -42,10 +42,12 @@ const MovieDetailsPage = () => {
       </div>
       <h2>Additional information</h2>
       <div className={s.Nav}>
-        <NavLink to="info">Cast</NavLink>
+        <NavLink to="cast">Cast</NavLink>
         <NavLink to="reviews">Reviews</NavLink>
       </div>
-      <Outlet />
+      <div>
+        <Outlet className={s.outlet} />
+      </div>
     </div>
   );
 };

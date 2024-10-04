@@ -20,7 +20,7 @@ const Cast = () => {
   return (
     <div>
       <div>
-        <ul>
+        <ul className={s.outlet}>
           {movie.cast.map((character) => (
             <li key={character.credit_id}>
               <img

@@ -1,0 +1,27 @@
+.input{
+    margin-right: 16px;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 4px;
+}
+
+.button{
+    padding: 4px;
+    border: 1px solid black;
+    border-radius: 4px;
+   background-color: rgb(189, 211, 240);
+    cursor: pointer;
+    
+    &.button:hover,
+    .button:focus
+    {
+        background-color: rgb(139, 172, 212);
+    }
+}
+
+.container{
+    width: 300px;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}

@@ -6,6 +6,7 @@ import s from "../HomePage/HomePage.module.css";
 const HomePage = () => {
   const [movies, setMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [query, setQuery] = useState("");
 
   useEffect(() => {
     const getAllMovies = async () => {
@@ -21,6 +22,11 @@ const HomePage = () => {
     };
     getAllMovies();
   }, []);
+
+  const handleChangeQuery = (newQuery) => {
+    setQuery(newQuery);
+  };
+
   return (
     <div>
       {isLoading && <h2>Is Loading ...</h2>}

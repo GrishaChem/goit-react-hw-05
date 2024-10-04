@@ -9,6 +9,7 @@ import MoviePage from "./Pages/MoviePage/MoviePage";
 import NotFound from "./Pages/NotFound/NotFound";
 import MovieDetailsPage from "./Pages/MovieDetailsPage/MovieDetailsPage";
 import Cast from "./Pages/Cast/Cast";
+import Reviews from "./Pages/Reviews/Reviews";
 
 const App = () => {
   return (
@@ -17,9 +18,10 @@ const App = () => {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/Movie" element={<MoviePage />} />
+        <Route path="/Movie" element={<MoviePage />} />
         <Route path="/Movie/:movieId" element={<MovieDetailsPage />}>
-          <Route path="info" element={<Cast />} />
-          <Route />
+          <Route path="cast" element={<Cast />} />
+          <Route path="reviews" element={<Reviews />} />
         </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>

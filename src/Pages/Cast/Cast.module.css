@@ -11,3 +11,8 @@ ul{
     padding: 0;
     margin: 0;
 }
+.outlet{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 64px;
+}
