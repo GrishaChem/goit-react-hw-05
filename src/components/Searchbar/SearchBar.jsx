@@ -1,5 +1,5 @@
 import React from "react";
-import s from "../SearchBar/SearchBar.module.css";
+import s from "../Searchbar/SearchBar.module.css";
 import { Field, Form, Formik } from "formik";
 
 const SearchBar = ({ handleChangeQuery }) => {
