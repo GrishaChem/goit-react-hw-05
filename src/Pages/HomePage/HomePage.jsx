@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { fetchMovies } from "../../services";
 import { Link } from "react-router-dom";
-import s from "../HomePage/HomePage.module.css";
+import s from "../HomePage/Homepage.module.css";
 
 const HomePage = () => {
   const [movies, setMovies] = useState([]);
