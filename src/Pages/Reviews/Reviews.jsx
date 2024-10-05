@@ -18,14 +18,14 @@ const Reviews = () => {
   if (!movie) return <h2>Loading...</h2>;
   if (!movie.results.length > 0) return <h2>There are no reviews</h2>;
   return (
-    <div className={s.container}>
+    <ul className={s.container}>
       {movie.results.map((review) => (
-        <div className={s.review}>
+        <li className={s.review} key={review.id}>
           <h2 className={s.author}>Author: {review.author}</h2>
           <p className={s.contnet}>{review.content}</p>
-        </div>
+        </li>
       ))}
-    </div>
+    </ul>
   );
 };
 

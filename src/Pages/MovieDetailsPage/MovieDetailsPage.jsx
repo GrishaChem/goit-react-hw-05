@@ -1,5 +1,11 @@
-import React, { useEffect, useState } from "react";
-import { useParams, NavLink, Outlet, Link } from "react-router-dom";
+import React, { Suspense, useEffect, useRef, useState } from "react";
+import {
+  useParams,
+  NavLink,
+  Outlet,
+  Link,
+  useLocation,
+} from "react-router-dom";
 import { fetchMovieById } from "../../services";
 import s from "../MovieDetailsPage/MovieDetailsPage.module.css";
 
@@ -7,6 +13,10 @@ const MovieDetailsPage = () => {
   const { movieId } = useParams();
   const [movie, setMovie] = useState(null);
   console.log(movieId);
+
+  const location = useLocation();
+  console.log(location);
+  const goBack = useRef(location.state ?? "/");
 
   useEffect(() => {
     const getData = async () => {
@@ -21,7 +31,7 @@ const MovieDetailsPage = () => {
 
   return (
     <div>
-      <Link to="/">Go back</Link>
+      <Link to={goBack.current}>Go back</Link>
       <div className={s.container}>
         <img
           src={"https://image.tmdb.org/t/p/w500/" + movie.backdrop_path}
@@ -46,7 +56,9 @@ const MovieDetailsPage = () => {
         <NavLink to="reviews">Reviews</NavLink>
       </div>
       <div>
-        <Outlet className={s.outlet} />
+        <Suspense>
+          <Outlet className={s.outlet} />
+        </Suspense>
       </div>
     </div>
   );

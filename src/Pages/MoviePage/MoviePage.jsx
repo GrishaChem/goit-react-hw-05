@@ -3,16 +3,21 @@ import s from "../MoviePage/MoviePage.module.css";
 import { Field, Form, Formik } from "formik";
 import SearchBar from "../../components/Searchbar/SearchBar";
 import { fetchMoviesByQuery } from "../../services";
-import { Link, useSearchParams } from "react-router-dom";
+import { Link, useLocation, useSearchParams } from "react-router-dom";
 
 const MoviePage = ({}) => {
   const [movies, setMovies] = useState([]); // Стейт для хранения данных о фильмах
 
   const [searchParams, setSearchParams] = useSearchParams();
 
+  const location = useLocation();
+  console.log(location);
   const query = searchParams.get("query") ?? "";
 
   const handleChangeQuery = (newQuery) => {
+    if (!newQuery) {
+      return setSearchParams({});
+    }
     searchParams.set("query", newQuery);
     setSearchParams(searchParams);
   };
@@ -35,7 +40,7 @@ const MoviePage = ({}) => {
         {movies.map((movie) => (
           <li key={movie.id}>
             {console.log(movie.id)}
-            <Link to={"/movie/" + movie.id.toString()}>
+            <Link to={"/movie/" + movie.id.toString()} state={location}>
               <p>{movie.title}</p>
             </Link>
           </li>
