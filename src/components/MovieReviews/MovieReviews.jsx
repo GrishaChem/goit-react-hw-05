@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams, NavLink, Outlet, Link } from "react-router-dom";
 import { fetchReviewsById } from "../../services";
-import s from "../Cast/Cast.module.css";
+import s from "../MovieCast/Cast.module.css";
 const Reviews = () => {
   const { movieId } = useParams();
   const [movie, setMovie] = useState(null);

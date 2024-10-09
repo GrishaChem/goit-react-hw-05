@@ -40,7 +40,7 @@ const MoviePage = ({}) => {
         {movies.map((movie) => (
           <li key={movie.id}>
             {console.log(movie.id)}
-            <Link to={"/movie/" + movie.id.toString()} state={location}>
+            <Link to={"/movies/" + movie.id.toString()} state={location}>
               <p>{movie.title}</p>
             </Link>
           </li>

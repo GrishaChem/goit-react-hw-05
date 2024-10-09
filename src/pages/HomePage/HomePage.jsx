@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { fetchMovies } from "../../services";
 import { Link } from "react-router-dom";
 import s from "./Homepage.module.css";
+import MovieList from "../../components/MovieList/MovieList";
 
 const HomePage = () => {
   const [movies, setMovies] = useState([]);
@@ -32,14 +33,7 @@ const HomePage = () => {
       {isLoading && <h2>Is Loading ...</h2>}
       <h1>Trending Today</h1>
       <ul className={s.container}>
-        {movies.map((movie) => (
-          <li key={movie.id}>
-            {console.log(movie.id)}
-            <Link to={"/movie/" + movie.id.toString()}>
-              <p>{movie.title}</p>
-            </Link>
-          </li>
-        ))}
+        <MovieList movies={movies} />
       </ul>
     </div>
   );
