@@ -20,7 +20,7 @@ import MovieCast from "./components/MovieCast/MovieCast";
 import MovieReviews from "./components/MovieReviews/MovieReviews";
 
 const MovieDetailsPage = lazy(() =>
-  import("./Pages/MovieDetailsPage/MovieDetailsPage")
+  import("./pages/MovieDetailsPage/MovieDetailsPage")
 );
 const Cast = lazy(() => import("./components/MovieCast/MovieCast"));
 const Reviews = lazy(() => import("./components/MovieReviews/MovieReviews"));
