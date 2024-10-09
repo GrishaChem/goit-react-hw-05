@@ -11,7 +11,7 @@ import NotFound from "./pages/NotFound/NotFound";
 // import Cast from "./Pages/Cast/Cast";
 // import Reviews from "./Pages/Reviews/Reviews";
 
-const HomePage = lazy(() => import("./Pages/HomePage/HomePage"));
+const HomePage = lazy(() => import("./pages/HomePage/HomePage"));
 const MoviePage = lazy(() => import("./pages/MoviesPage/MoviesPage"));
 // const NotFound = lazy(() => import("./Pages/MoviePage/MoviePage"));
 
