@@ -6,7 +6,7 @@ import "./App.css";
 import Navigation from "./components/Header/Navigation";
 // import HomePage from "./Pages/HomePage/HomePage";
 // import MoviePage from "./Pages/MoviePage/MoviePage";
-import NotFound from "./Pages/NotFound/NotFound";
+import NotFound from "./pages/NotFound/NotFound";
 // import MovieDetailsPage from "./Pages/MovieDetailsPage/MovieDetailsPage";
 // import Cast from "./Pages/Cast/Cast";
 // import Reviews from "./Pages/Reviews/Reviews";
