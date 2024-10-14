@@ -1,18 +1,23 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import s from "../MovieList/MovieList.module.css";
 
 const MovieList = ({ movies }) => {
+  const location = useLocation();
+
   return (
-    <>
+    <ul className={s.container}>
       {movies.map((movie) => (
         <li key={movie.id}>
-          {console.log(movie.id)}
-          <Link to={"/movies/" + movie.id.toString()}>
+          <Link
+            to={`/movies/${movie.id}`}
+            state={location} // передаємо поточне розташування
+          >
             <p>{movie.title}</p>
           </Link>
         </li>
       ))}
-    </>
+    </ul>
   );
 };
 
